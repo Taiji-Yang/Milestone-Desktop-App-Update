@@ -1,6 +1,6 @@
 # Application Preview
 
-https://user-images.githubusercontent.com/55518277/135970825-992effd5-d580-4d0a-8e8f-f9b3e1f2909d.mp4
+https://user-images.githubusercontent.com/55518277/135971003-49934f9e-917e-4922-b48e-0ce10a113153.mp4
 
 
 # Documentation
