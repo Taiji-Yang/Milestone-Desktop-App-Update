@@ -7,8 +7,9 @@ The project is built with Material UI + React.js frontend + Flask backend and de
 # Installation
 1. create and activate a virtual environment (recommended but not required)
 2. clone the project
-3. `npm install` to install all dependencies
-4. `npm start`
+3. install Flask `pip install flask`
+4. `npm install` to install all dependencies
+5. `npm start`
 
 Note: please use `yarn add {your package name}` within the Milestone-Desktop-App-Update folder to add dependencies if there is any other dependency that is not installed by `npm install` 
 
