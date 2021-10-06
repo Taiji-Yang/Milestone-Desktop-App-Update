@@ -10,7 +10,7 @@ The project is built with Material UI + React.js frontend + Flask backend and de
 3. `npm install` to install all dependencies
 4. `npm start`
 
-Note: please use `yarn add {your package name}` within the Milestone-Desktop-App-Update folder to add dependencies if there is any other dependency that are not installed by `npm install` 
+Note: please use `yarn add {your package name}` within the Milestone-Desktop-App-Update folder to add dependencies if there is any other dependency that is not installed by `npm install` 
 
 # Documentation
 ### React.js ###
