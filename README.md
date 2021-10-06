@@ -22,6 +22,8 @@ AddDate.js | add date button | Date options are imported through user-input xlsx
 MyToolBar.js | header of the table | Import, export and delete buttons are provided. The delete button will be blocked if no row is selected. Success message/Error message are shown on successfully/failed exporting. No message for importing. If the importing action is failed, the milestone and the date options will be shown as "no data''. Only xlsx format is supported for importing and exporting. And the data format for the importing file is shown below. Any other format may cause errors and it's not able to be handled by the program yet.
 MilestoneTableHead.js | column name of the table | column names are `Milestones` and `Dates`. Select-all checkbox is provided for easily selecting all rows on the table (including the ones that are on other pages)
 
+![imput file format](docs/Format.PNG)
+
 ### Flask ###
 There are two routes in the Flask app (`app.py`): `@app.route('/getData', methods = ['GET'])` for importing and `@app.route('/PostData', methods = ['POST'])` for exporting. Potential errors are handled through try/except.
 
