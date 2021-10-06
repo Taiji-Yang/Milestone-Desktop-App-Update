@@ -26,7 +26,7 @@ MilestoneTableHead.js | column name of the table | column names are `Milestones`
 ![imput file format](docs/Format.PNG)
 
 ### Flask ###
-There are two routes in the Flask app (`app.py`): `@app.route('/getData', methods = ['GET'])` for importing and `@app.route('/PostData', methods = ['POST'])` for exporting. Potential errors are handled through try/except.
+There are two routes in the Flask app (`app.py`): `@app.route('/GetData', methods = ['GET'])` for importing and `@app.route('/PostData', methods = ['POST'])` for exporting. Potential errors are handled through try/except.
 
 ### Electron ###
 The size of the Electron app (`main.js`) is responsive and calculated based on the size of the current monitor. And the URL of the Electron app is connected to the address of the React app.

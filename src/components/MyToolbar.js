@@ -61,7 +61,7 @@ const MyToolbar = (props) => {
             })
     }
     const handleUpload = () => {
-        fetch('/getData').then((res) => res.json()).then((data) => {
+        fetch('/GetData').then((res) => res.json()).then((data) => {
             console.log(data["Milestones"], data["Dates"]);
             updateMilestoneData(data["Milestones"]);
             updateDateData([]);

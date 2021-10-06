@@ -7,7 +7,7 @@ dfs = pd.read_excel('milestones.xlsx', sheet_name=None, engine='openpyxl')
 print(type(dfs), type(dfs['Sheet1']), list(dfs['Sheet1']['Milestone']), list(dfs['Sheet1']['Completion date']) )
 
 
-@app.route('/getData', methods = ['GET'])
+@app.route('/GetData', methods = ['GET'])
 def api():
     try:
         import tkinter as tk
