@@ -18,7 +18,7 @@ import DatePicker from '@mui/lab/DatePicker';
 
 
 
-const CustomizedMilestone = (props) => {
+const AddDate = (props) => {
     const { MilestoneData, DateData, updateMilestoneData, updateDateData, DataOnTable, updateDataOnTable, MilestoneToDate} = props;
     const [open, setOpen] = useState(false);
     const [milestone, setMilestone] = useState('');
@@ -56,8 +56,9 @@ const CustomizedMilestone = (props) => {
         updateDateData([])
         setMilestone('')
         setdate('')
+        setdefaultDate('')
         setnewDateShow(false)
-        setnewDateShow(false)
+        setdefaultDateShow(false)
         if (reason !== 'backdropClick') {
             setOpen(false);
         }
@@ -66,8 +67,9 @@ const CustomizedMilestone = (props) => {
     const handleCancel = (event, reason) => {
         setMilestone('')
         setdate('')
+        setdefaultDate('')
         setnewDateShow(false)
-        setnewDateShow(false)
+        setdefaultDateShow(false)
         if (reason !== 'backdropClick') {
             setOpen(false);
         }
@@ -170,4 +172,4 @@ const CustomizedMilestone = (props) => {
     );
 }
 
-export default CustomizedMilestone
+export default AddDate

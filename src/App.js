@@ -8,8 +8,8 @@ import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Checkbox from '@mui/material/Checkbox';
-import DefaultMilestone from "./components/DefaultMilestone"
-import CustomizedMilestone from "./components/CustomizedMilestone"
+import AddMilestone from "./components/AddMilestone"
+import AddDate from "./components/AddDate"
 import MyToolbar from "./components/MyToolbar"
 import MilestoneTableHead from "./components/MilestoneTableHead"
 
@@ -197,7 +197,7 @@ export default function App() {
                         </Table>
                     </TableContainer>
                     <TablePagination
-                        rowsPerPageOptions={[5, 10, 25]}
+                        rowsPerPageOptions={[5]}
                         component="div"
                         count={DataOnTable.length}
                         rowsPerPage={rowsPerPage}
@@ -227,7 +227,7 @@ export default function App() {
                             gap: "10%",
                         }}
                     >
-                        <DefaultMilestone
+                        <AddMilestone
                             MilestoneData={MilestoneData}
                             DateData={DateData}
                             updateMilestoneData={updateMilestoneData}
@@ -236,8 +236,8 @@ export default function App() {
                             updateDataOnTable={updateDataOnTable}
                             MilestoneToDate={MilestoneToDate}
                         >
-                        </DefaultMilestone>
-                        <CustomizedMilestone
+                        </AddMilestone>
+                        <AddDate
                             MilestoneData={MilestoneData}
                             DateData={DateData}
                             updateMilestoneData={updateMilestoneData}
@@ -246,7 +246,7 @@ export default function App() {
                             updateDataOnTable={updateDataOnTable}
                             MilestoneToDate={MilestoneToDate}
                         >
-                        </CustomizedMilestone>
+                        </AddDate>
                     </Box>
                 </Box>
             </Box>

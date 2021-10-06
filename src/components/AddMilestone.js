@@ -12,7 +12,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 
-const DefaultMilestone = (props) => {
+const AddMilestone = (props) => {
     const { MilestoneData, DateData, updateMilestoneData, updateDateData, DataOnTable, updateDataOnTable, MilestoneToDate} = props;
     const [open, setOpen] = React.useState(false);
     const [milestone, setMilestone] = React.useState('');
@@ -86,4 +86,4 @@ const DefaultMilestone = (props) => {
     );
   }
 
-  export default DefaultMilestone
+  export default AddMilestone

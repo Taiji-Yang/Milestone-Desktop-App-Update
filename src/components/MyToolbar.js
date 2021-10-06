@@ -14,12 +14,21 @@ import Alert from '@mui/material/Alert';
 const MyToolbar = (props) => {
     const { numSelected, selected, selectedDate, setSelectedDate, clearSelected, updateDataOnTable, DataOnTable, MilestoneData, DateData, updateMilestoneData, updateDateData, DefaultDates, DefaultMilestones, updateDefaultDates, updateDefaultMilestones, updateMilestoneToDate} = props;
     const [open, setOpen] = useState(false);
+    const [openError, setOpenError] = useState(false);
     const [numSaved, setNumSaved] = useState(0);
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
             return;
         }
         setOpen(false);
+        setOpenError(false);
+    };
+    const handleCloseError = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+        setOpen(false);
+        setOpenError(false);
     };
     const deleteItem = () => {
         console.log(selected, selectedDate);
@@ -41,11 +50,13 @@ const MyToolbar = (props) => {
                 method: 'POST',
                 headers: { 'Accept': 'application/json', 'Content-type': 'application/json' },
                 body: JSON.stringify({ DataOnTable: DataOnTable })
-            }).then((res) => {
-                console.log(res.ok)
-                if(res.ok){
+            }).then((res) => res.json()).then((data) => {
+                console.log(data)
+                if(data['status'] == 'ok'){
                     setNumSaved(DataOnTable.length)
                     setOpen(true);
+                } else {
+                    setOpenError(true)
                 }
             })
     }
@@ -159,6 +170,11 @@ const MyToolbar = (props) => {
             <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
                 <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
                     Success! {numSaved} Milestones was saved to my_selected_milestones.xlsx!
+                </Alert>
+            </Snackbar>
+            <Snackbar open={openError} autoHideDuration={6000} onClose={handleCloseError}>
+                <Alert onClose={handleCloseError} severity="error" sx={{ width: '100%' }}>
+                    Oops! Something is not right. Please check the file name again!
                 </Alert>
             </Snackbar>
         </Toolbar>
